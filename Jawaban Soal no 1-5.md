@@ -1,5 +1,8 @@
 # Latihan-4-fungsi-transfer-modul-3-
 tugas class room  dengan link berikut .  https://classroom.google.com/c/ODAyNDczODQxOTQ5/a/ODMxODE5NTA5ODIy/details
+
+NO 1
+
 >> num = [1 1];
 den = [1 3 1];
 sys = tf(num,den) % Membuat fungsi transfer
@@ -109,6 +112,13 @@ num/den =
         s^2 + 3 s + 2
    ----------------------
    s^3 + 3 s^2 + 4 s + 12
+
+NO 2.Hasil fungsi transfer berikut ini
+
+Dalam bentuk:
+a. Rasio terfaktor
+b. Rasio polynomial
+
 >> z = [-15 -26 -72]; % Mendefinisikan Zeros, Poles, dan Gain
 
 p = [0, -55, -56, roots([1 5 30])', roots([1 27 52])'];
@@ -148,6 +158,10 @@ Gp =
  
 Continuous-time transfer function.
 Model Properties
+
+NO 3. Dari fungsi transfer berikut ini:
+Tunjukkan hasil rasio terfaktor dan rasio polynomial
+
 >> num = [1 25 20 15 42];% Koefisien Pembilang (Numerator)
 
 den = [1 13 9 37 35 50];% Koefisien Penyebut (Denominator)
@@ -179,49 +193,11 @@ Gzpk =
  
 Continuous-time zero/pole/gain model.
 Model Properties
->> % Program MATLAB untuk menghitung Partial-Fraction Expansion F(s)
+
+NO 4.% Program MATLAB untuk menghitung Partial-Fraction Expansion F(s)
 
 % Definisi Awal Zeros, Poles, dan Gain (Sesuai F(s))
 
-z = [-5 -70];
-
-
-
-p = [0 -45 -55 roots([1 7 110])' roots([1 6 95])'];% Poles: s=0, s=-45, s=-55, dan akar dari s^2+7s+110, s^2+6s+95
-
-
-
-k = 1e4; % Gain (Penguatan): 10^4 = 10000
-
-
-
-[numg, deng] = zp2tf(z, p, k);% Konversi ke Bentuk Polinomial (TF)
-
-disp('Hasil Ekspansi Pecahan Parsial [r, p, k]');% 3. Menghitung Ekspansi Pecahan Parsial (RESIDUE)Sintaks: [r, p, k] = residue(num, den)
-
-[r, p, k_const] = residue(numg, deng)
-Error using zp2tf (line 31)
-Z must be a column vector.
- 
->> z = [-5 -70];% Program MATLAB untuk menghitung Partial-Fraction Expansion F(s)
-
-
-
-p = [0 -45 -55 roots([1 7 110])' roots([1 6 95])'];% Poles: s=0, s=-45, s=-55, dan akar dari s^2+7s+110, s^2+6s+95
-
-
-
-k = 1e4; % Gain (Penguatan): 10^4 = 10000
-
-
-
-[numg, deng] = zp2tf(z, p, k);% Konversi ke Bentuk Polinomial (TF)
-
-disp('Hasil Ekspansi Pecahan Parsial [r, p, k]');% 3. Menghitung Ekspansi Pecahan Parsial (RESIDUE)Sintaks: [r, p, k] = residue(num, den)
-
-[r, p, k_const] = residue(numg, deng)
-Error using zp2tf (line 31)
-Z must be a column vector.
  
 >> z = [-5 -70];
 
@@ -235,6 +211,7 @@ disp('Hasil Ekspansi Pecahan Parsial [r, p, k]');
 [r, p, k_const] = residue(numg, deng)
 Hasil Ekspansi Pecahan Parsial [r, p, k]
 
+NO 5
 r =
 
   -0.0018 + 0.0000i
